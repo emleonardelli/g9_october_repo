@@ -1,0 +1,100 @@
+v1.0.1:
+    - First version of ApiShopaholic
+v1.0.2:
+    - Move traits and base classes to PlanetaDelEste.ApiToolbox plugin
+v1.0.3:
+    - Fix auth issues
+v1.0.4:
+    - Add Brands api controller
+v1.0.5:
+    - Add getSortColumn method
+v1.0.6:
+    - Add getSortColumn method to Users controller
+v1.0.7:
+    - Add role to User api attributes
+    - Return UserItem on authenticate data response
+    - Add before/after save events on Products and Users controllers
+    - Use custom throttle, bindings middleware instead of api on routes
+    - Add before save event on Profile controller
+v1.0.8:
+    - Add role to User api attributes
+    - Return UserItem on authenticate data response
+    - Add before/after save events on Products and Users controllers
+    - Use custom throttle, bindings middleware instead of api on routes
+    - Add before save event on Profile controller
+v1.0.9:
+    - Use "web" middleware on cart routes to get session data
+    - Add paymentmethods api resource
+    - Add file to api routes
+    - Add brand property to products response
+    - Add offers method to products controller
+v1.0.10:
+    - New route "orders/{id}/position" to load order position items
+    - Add compatibility with postgresql
+    - Move payment methods routes inside of orders group
+    - Add web middleware to orders routes
+    - Remove options from Route::apiResource on orders routes
+    - Display status name using trans function
+    - Add try-catch block on Profile avatar/address methods
+    - Add address route to profile
+    - Add created_at and updated_at attributes to User model
+    - Set location data
+    - Add after signup and valid events
+    - Fix Auth signup
+    - Add PaymentMethods controller
+v1.0.11:
+    - Organize routes
+v1.0.12:
+    - Move orders elements to ApiOrdersShopaholic plugin
+v1.0.13:
+    - Move UserAddress to ApiOrdersShopaholic package
+    - Rename resources event
+v1.0.14:
+    - New root method on CategoryCollection
+    - Fix User property api resource
+v1.0.15:
+    - Fix loading offers on backend
+    - Remove unused consts
+v1.0.16:
+    - Fix storing missing langs
+v1.0.17:
+    - Add currencies
+v1.0.18:
+    - Try to clear category cache on create, save, delete
+    - Add external_id property on ItemResource
+    - Remove active method on RootListStore
+    - Set active method only if request hasn't from backend
+v1.0.19:
+    - New event on Categories tree
+v1.0.20:
+    - Add list route
+    - Clear category cache after create, update or delete
+v1.0.21:
+    - Fix clearing cache on child items
+v1.0.22:
+    - Fix check_reset_code route
+v1.0.23:
+    - Set resource returns type
+v1.0.24:
+    - Fix return declaration
+v1.0.25:
+    - Fix authenticate with inactive users
+v1.0.26:
+    - New langs|locale routes
+    - Improve changing locale method
+v1.0.27:
+    - Fix issue saving users unset is_activated attribute
+    - New event after refresh api session
+v1.0.28:
+    - Cast active property as boolean
+v1.0.29:
+    - Add taxes to api
+v1.0.30:
+    - 'Fix Declaration of getModelClass() must be compatible with Base::getModelClass()'
+v1.0.31:
+    - 'Fix Declaration of init() must be compatible with Base::init()'
+v1.0.32:
+    - 'Add users list route'
+v1.0.33:
+    - 'Register user logged activity'
+    - v1.0.33/create_table_loggedusers.php

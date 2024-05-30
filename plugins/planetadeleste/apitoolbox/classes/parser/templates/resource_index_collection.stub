@@ -1,0 +1,18 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Classes\Resource\{{studly_model}};
+
+use Illuminate\Http\Resources\Json\ResourceCollection;
+
+/**
+ * Class IndexCollection
+ *
+ * @package {{studly_author}}\{{studly_plugin}}\Classes\Resource\{{studly_model}}
+ */
+class {{studly_model}}IndexCollection extends ResourceCollection
+{
+    public $collects = {{studly_model}}ShowResource::class;
+
+    public function toArray($request)
+    {
+        return $this->collection;
+    }
+}

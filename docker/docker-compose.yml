@@ -1,0 +1,94 @@
+networks:
+    g9_network:
+        name: g9_network
+        driver: bridge
+        ipam:
+            config:
+                - subnet: 173.22.0.0/24
+
+services:
+    app:
+        build:
+            args:
+                uid: "${USER_ID}"
+            context: ./
+            dockerfile: Dockerfile
+        container_name: g9_app
+        restart: unless-stopped
+        networks:
+            g9_network:
+                ipv4_address: 173.22.0.5
+        ports:
+            - 9000:9000
+        volumes:
+            - ../:/var/www
+        links:
+            - db
+    db:
+        #image: mysql:5.7
+        image: postgres:13
+        container_name: g9_db
+        networks:
+            g9_network:
+                ipv4_address: 173.22.0.4
+        restart: unless-stopped
+        command: postgres -c listen_addresses='*'
+        ports: 
+            - 5432:5432
+            #- 3306:3306
+        environment:
+            POSTGRES_DB: ${DB_NAME}
+            POSTGRES_USER: ${DB_PASS}
+            POSTGRES_PASSWORD: ${DB_PASS}
+            #MYSQL_DATABASE: ${DB_NAME}
+            #MYSQL_USER: ${DB_USER}
+            #MYSQL_PASSWORD: ${DB_PASS}
+            #MYSQL_ROOT_PASSWORD: ${DB_PASS} 
+        expose:
+            #- 3306
+            - 5432
+        volumes:
+            #- ./data/mysqlConfig:/etc/mysql/conf.d
+            #- ./data/mysql:/var/lib/mysql
+            - ./data/db:/var/lib/postgresql/data
+    adminer:
+        image: dpage/pgadmin4
+        container_name: g9_adminer
+        restart: always
+        ports:
+            - 8000:80
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=admin@admin.com
+            - PGADMIN_DEFAULT_PASSWORD=${DB_PASS}
+    #pma:
+    #    image: phpmyadmin/phpmyadmin
+    #    container_name: g9_pma
+    #    networks:
+    #        g9_network:
+    #            ipv4_address: 173.22.0.3
+    #    restart: unless-stopped
+    #    links: 
+    #        - db:db
+    #    ports:
+    #        - 8000:80
+    #    environment:
+    #        MYSQL_USER: ${DB_USER}
+    #        MYSQL_PASSWORD: ${DB_PASS}
+    #        MYSQL_ROOT_PASSWORD: ${DB_PASS}
+    #        UPLOAD_LIMIT: 300M
+    proxy:
+        image: nginx:1.17-alpine
+        container_name: g9_proxy
+        networks:
+            g9_network:
+                ipv4_address: 173.22.0.2
+        restart: unless-stopped
+        ports:
+            - ${NGINX_PORT}:80
+        volumes:
+            - ../:/var/www
+            - ./data/nginx/conf.d:/etc/nginx/conf.d
+        depends_on:
+            - app
+volumes:
+    persistent:

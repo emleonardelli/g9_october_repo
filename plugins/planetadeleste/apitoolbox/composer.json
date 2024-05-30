@@ -1,0 +1,34 @@
+{
+    "name":"planetadeleste/oc-apitoolbox-plugin",
+    "description":"Base toolbox plugin for Api Shopaholic plugins",
+    "type":"october-plugin",
+    "license":"MIT",
+    "keywords":[
+        "october",
+        "shopaholic",
+        "api"
+    ],
+    "authors":[
+        {
+            "name":"Alvaro Canepa",
+            "email":"bfpdevel@gmail.com",
+            "role":"creator"
+        }
+    ],
+    "autoload":{
+        "psr-4":{
+            "PlanetaDelEste\\ApiToolbox\\":""
+        },
+        "files":[
+            "helpers.php"
+        ]
+    },
+    "extra": {
+        "installer-name": "apitoolbox"
+    },
+    "require":{
+        "php":">=7.2",
+        "phlak/semver": "^4.0",
+        "ext-json":"*"
+    }
+}

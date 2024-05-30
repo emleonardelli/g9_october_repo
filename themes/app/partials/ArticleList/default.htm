@@ -1,0 +1,18 @@
+{% if iCategoryId is defined %}
+    {% set obArticleList = ArticleList.make().category(iCategoryId).sort('publish|desc').published() %}
+    {% if obArticleList.isNotEmpty() %}
+        <div class="article-list-wrapper">
+            {% for obArticle in obArticleList %}
+                <div data-id="{{ obArticle.id }}">
+                    <h2>{{ obArticle.title }}</h2>
+                    <span>{{ obArticle.published_start.format('F d, Y') }}</span>
+                    {% if obArticle.preview_image is not empty %}
+                        <img src="{{ obArticle.preview_image.path }}" title="{{ obArticle.preview_image.title }}"
+                             alt="{{ obArticle.preview_image.description }}">
+                    {% endif %}
+                    <div>{{ obArticle.preview_text }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endif %}

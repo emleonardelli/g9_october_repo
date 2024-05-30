@@ -1,0 +1,208 @@
+html {
+  font-size: 12px;
+}
+
+.wrapper {
+  margin: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.middle {
+  text-align: center;
+}
+
+.title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.title-1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.title-2 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+.title-3 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.subtitle {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.head-content {
+  padding-bottom: 4px;
+  border-style: none none ridge none;
+  font-size: 18px;
+}
+
+table thead {
+  display: table-header-group;
+}
+table thead th {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+table thead th:not(.left):not(.right) {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-align: center;
+}
+table tfoot {
+  display: table-row-group;
+}
+table tr {
+  page-break-inside: avoid;
+}
+table tr.even {
+  background-color: #cbd5e1;
+}
+table tr.even > td {
+  background-color: #cbd5e1;
+}
+table tr.odd {
+  background-color: #f1f5f9;
+}
+table tr.odd > td {
+  background-color: #f1f5f9;
+}
+table tr.divider {
+  background-color: #ffffff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+table tr.divider > td {
+  background-color: #ffffff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+table.footer {
+  margin-top: 20px;
+}
+table.footer td {
+  vertical-align: bottom;
+}
+table.footer td.left, table.footer td.right {
+  width: 20%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+table .footer-content {
+  text-align: center;
+  font-size: 16px;
+}
+table.table {
+  width: 100%;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-collapse: collapse;
+}
+table.table tr > td {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+table.bordered {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #64748b;
+}
+table.items tfoot {
+  background-color: #e2e8f0;
+}
+table.items tfoot td {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+table.group.group-level-0 > tfoot tr:first-child td {
+  border-top-width: 1px;
+  border-style: solid;
+  border-color: #64748b;
+}
+table.group table.group:not(.group-level-0) {
+  border-style: solid;
+  border-color: transparent;
+  border-left-width: 1cm;
+}
+table .left {
+  text-align: left;
+}
+table .right {
+  text-align: right;
+}
+table .bold {
+  font-weight: 600;
+}
+
+.customer-info .customer-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+.customer-info .customer-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+.customer-info .customer-doc, .customer-info .customer-phone {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+}
+
+.page-break {
+  page-break-after: always;
+  page-break-inside: avoid;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-grey {
+  background-color: #cbd5e1;
+}
+
+.bg-light {
+  background-color: #f1f5f9;
+}
+
+.bg-brand {
+  background-color: #1e40af;
+  color: #fff;
+}
+
+.text-brand {
+  color: #1e40af;
+}
+
+.f-white {
+  color: #fff;
+}
+
+.header-company {
+  padding-top: 1rem;
+}
+.header-company .company-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
+.header-company .company-subtitle {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 200;
+}
+.header-company tr > td {
+  vertical-align: middle;
+}

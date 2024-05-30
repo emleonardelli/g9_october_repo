@@ -1,0 +1,11 @@
+<?php namespace {{studly_author}}\{{studly_plugin}}\Classes\Resource\{{studly_model}};
+
+/**
+ * Class ShowResource
+ *
+ * @mixin \{{studly_expansion_author}}\{{studly_expansion_plugin}}\Classes\Item\{{studly_model}}Item
+ * @package {{studly_author}}\{{studly_plugin}}\Classes\Resource\{{studly_model}}
+ */
+class {{studly_model}}ShowResource extends {{studly_model}}ItemResource
+{
+}

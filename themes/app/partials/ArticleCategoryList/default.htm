@@ -1,0 +1,9 @@
+{% set obCategoryList = ArticleCategoryList.make().active() %}
+{% if obCategoryList.isNotEmpty() %}
+    {% for obCategory in obCategoryList %}
+        {% if obCategory.slug in ['pages'] %}
+            <h3>{{ obCategory.name }} ({{ obCategory.slug }})</h3>
+            {% component "ArticleList" iCategoryId=obCategory.id %}
+        {% endif %}
+    {% endfor %}
+{% endif %}

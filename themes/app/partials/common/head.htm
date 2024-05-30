@@ -1,0 +1,23 @@
+==
+<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+<meta charset="utf-8">
+
+<title>{{ this.page.meta_title | default('APP - Planeta del Este') }}</title>
+
+<meta name="token" content="{{ token }}">
+<meta name="description" content="{{ this.page.meta_description | default(this.theme.description) }}">
+<meta name="title" content="{{ this.page.meta_title|default('APP - Planeta del Este') }}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<link rel="canonical" href="">
+<link rel="shortcut icon" href="{{ 'assets/images/favicon.ico'|theme }}" type="image/x-icon"/>
+<link rel="icon" type="image/png" href="{{ 'assets/images/favicon.png'|theme }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css">
+
+{% styles %}
+
+<meta name=theme-color content=#4DBA87>
+<meta name=apple-mobile-web-app-capable content=no>
+<meta name=apple-mobile-web-app-status-bar-style content=default>
+<meta name=apple-mobile-web-app-title content=DidaHome>

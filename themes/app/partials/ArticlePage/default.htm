@@ -1,0 +1,9 @@
+{% set obArticle = ArticlePage.get() %}
+<article>
+    <h1>{{ obArticle.title }}</h1>
+    <span>{{ obArticle.published_start.format('F d, Y') }}</span>
+    {% if obArticle.preview_image is not empty %}
+        <img src="{{ obArticle.preview_image.path }}" title="{{ obArticle.preview_image.title }}" alt="{{ obArticle.preview_image.description }}">
+    {% endif %}
+    <div>{{ obArticle.content|raw }}</div>
+</article>
